@@ -37,6 +37,10 @@
   }
 }
 
+.App .jwplayer {
+  width: 1000px !important;
+}
+
 .App ul {
   list-style: none;
   text-align: left;
