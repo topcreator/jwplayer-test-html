@@ -84,10 +84,10 @@ function App() {
       console.log('onTime==>', playlistCurrentIndex, video);
 
       setTitle(video.title);
-      setIndex(playlistCurrentIndex);
-      if (event.duration - event.position <= 5) {
-        player.playlistNext();
-      }
+      // setIndex(playlistCurrentIndex);
+      // if (event.duration - event.position <= 5) {
+      //   player.playlistNext();
+      // }
     });
   }, []);
   return (
