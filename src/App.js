@@ -78,13 +78,16 @@ function App() {
         //this is not required
       }
     });
-    player.on("time", function() {
+    player.on("time", function(event) {
       const playlistCurrentIndex = player.getPlaylistIndex();
       const video = player.getPlaylistItem(playlistCurrentIndex);
       console.log('onTime==>', playlistCurrentIndex, video);
 
       setTitle(video.title);
       setIndex(playlistCurrentIndex);
+      if (event.duration - event.position <= 5) {
+        player.playlistNext();
+      }
     });
   }, []);
   return (
